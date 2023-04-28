@@ -1,0 +1,387 @@
+.main{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-component{
+  width: 100%;
+  height: 16.8rem;
+  position: relative;
+  user-select: none;
+  margin-bottom: 5.5rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/images/bg-main-mobile.png');
+}
+
+.front-disp{
+  position: absolute;
+  top: 8.9rem;
+  left: 1.2rem;
+  z-index: 2;
+}
+
+.back-disp{
+  position: absolute;
+  top: 2.3rem;
+  right: 1.2rem;
+  z-index: 1;
+}
+
+.rel-box{
+  position: relative;
+}
+
+.front-bg, .back-bg{
+  width: 20.3rem;
+  height: auto;
+}
+
+.item{
+  position: absolute;
+}
+
+.rel-box .logo{
+  width: 3.8rem;
+  top: 1.2rem;
+  left: 1.4rem;
+}
+
+.rel-box .card-number{
+  color: var(--white);
+  bottom: 3.6rem;
+  left: 1.4rem;
+  font-size: 1.3rem;
+  letter-spacing: .2rem;
+}
+
+.rel-box .name{
+  color: var(--light-grayish-violet);
+  bottom: 1.6rem;
+  left: 1.4rem;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.rel-box .exp-date{
+  color: var(--light-grayish-violet);
+  bottom: 1.6rem;
+  right: 1.4rem;
+  font-size: .75rem;
+  font-weight: 600;
+} 
+
+.back{
+  color: var(--white);
+  top: 5rem;
+  right: 2.5rem;
+  z-index: 2;
+  font-size: .7rem;
+}
+
+.form{
+  margin: 1rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.3rem;
+}
+
+.form .inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.3rem;
+}
+
+.input-box, .input-lil-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+:where(.input-box, .input-lil-box) p.err{
+  font-size: .8rem;
+  color: var(--err);
+}
+
+.other-input-box{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .8rem;
+}
+
+.input-lil-box{
+  width: 50%;
+}
+
+.date-inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .5rem;
+}
+
+.date-inputs input{
+  width: 50%;
+}
+
+:where(.input-box, .input-lil-box) label{
+  color: var(--very-dark-violet);
+  font-size: .85rem;
+  font-weight: 900;
+  letter-spacing: .15rem;
+}
+
+input{
+  color: var(--very-dark-violet);
+  width: 100%;
+  height: 3.3rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: .6rem .9rem;
+  border: 1.5px solid var(--light-grayish-violet);
+  outline: none;
+  border-radius: .4rem;
+}
+
+input:focus{
+  outline: none;
+}
+
+input.active{
+  border: 1.5px solid var(--active);
+}
+
+input.error{
+  border: 1.5px solid var(--err);
+}
+
+.input-box input{
+  width: 100%;
+}
+
+input::placeholder{
+  color: var(--dark-grayish-violet);
+  opacity: .5;
+  font-weight: 600;
+}
+
+.form .tick-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.tick-box .icon-tick{
+  width: 5.5rem;
+}
+
+.msg-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .8rem;
+}
+
+.msg-box p:first-of-type{
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: .2rem;
+}
+
+.msg-box p:last-of-type{
+  color: var(--dark-grayish-violet);
+  opacity: .7;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.form button{
+  padding: 1rem 1rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: .5rem;
+  color: var(--white);
+  background-color: var(--very-dark-violet);
+}
+
+.form button.disabled{
+  opacity: .5;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .main{
+    height: 100vh;
+    flex-direction: row;
+  }
+  
+  .cards-component{
+    width: 80%;
+    height: 100%;
+    margin-bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/images/bg-main-desktop.png');
+  }
+  
+  .front-disp{
+    width: 22rem;
+    top: 40%;
+    left: 30%;
+    z-index: 2;
+  }
+  
+  .back-disp{
+    width: 22rem;
+    top: 51%;
+    left: 50%;
+    z-index: 1;
+  }
+  
+  .rel-box{
+    width: auto;
+  }
+  
+  .rel-box .logo{
+    width: 3.9rem;
+    top: 1.4rem;
+    left: 1.4rem;
+  }
+  
+  .rel-box .card-number{
+    bottom: 4rem;
+    left: 1.4rem;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+  }
+  
+  .rel-box .name{
+    bottom: 1.7rem;
+    left: 1.4rem;
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+  }
+  
+  .rel-box .exp-date{
+    bottom: 1.7rem;
+    right: 1.4rem;
+    font-size: .75rem;
+    font-weight: 500;
+  } 
+
+  .front-bg, .back-bg{
+    width: 22rem;
+    height: 12.5rem;
+  }
+  
+  .back{
+    top: 5.7rem;
+    right: 2.7rem;
+    z-index: 2;
+    font-size: .8rem;
+    font-weight: 500;
+  }
+  
+  .form{
+    flex: 200%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  
+  .inputs, .tick-box{
+    width: 22rem;
+    margin-right: 10rem;
+  }
+  
+  .form .inputs{
+    gap: 1rem;
+  }
+  
+  .input-box, .input-lil-box{
+    gap: .5rem;
+  }
+  
+  :where(.input-box, .input-lil-box) p.err{
+    font-size: .7rem;
+  }
+  
+  .other-input-box{
+    gap: .8rem;
+  }
+  
+  .date-inputs{
+    gap: .5rem;
+  }
+  
+  :where(.input-box, .input-lil-box) label{
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: .1rem;
+  }
+  
+  input{
+    height: 2.8rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: .6rem .9rem;
+    border-radius: .4rem;
+  }
+  
+  input:focus{
+    outline: none;
+  }
+  
+  input::placeholder{
+    font-weight: 600;
+  }
+  
+  .form .tick-box{
+    gap: 2.1rem;
+  }
+  
+  .tick-box .icon-tick{
+    width: 5.2rem;
+  }
+  
+  .msg-box{
+    gap: .8rem;
+  }
+  
+  .msg-box p:first-of-type{
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+  }
+  
+  .msg-box p:last-of-type{
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+  
+  .form button{
+    padding: .8rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: .5rem;
+  }
+}
